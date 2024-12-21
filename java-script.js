@@ -10,7 +10,7 @@ addNameButton.addEventListener('click', () => {
 
     createNameDiv()
     let remaingScoreReference = createAnElement(startingScore, remainingScoreRow, "div")
-    
+    createScoreContainer()
 })
 
 
@@ -29,10 +29,13 @@ function createNameDiv(){
 function createScoreContainer(){
 
    let subtractContainer = createAnElement("",subtractRow, "div")
-   createAnElement("",)
+   let textbox = createAnElement("", subtractContainer, "input")
+    let subtractButton = createAnElement("Subtract",subtractContainer, "button")
   
 
 }
+
+
 
 function createAnElement(text, parent, type){
     div = document.createElement(type)
