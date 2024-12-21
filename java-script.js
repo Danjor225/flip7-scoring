@@ -37,14 +37,14 @@ function createScoreContainer(remainingScoreReference){
 
 }
 
-function subtractRoundScore(remainingScore, toSubtractText){
+function subtractRoundScore(remainingScoreElement, toSubtractText){
 
-    let remainingScoreNumber = parseInt(remainingScore.innerText)
+    let remainingScoreNumber = parseInt(remainingScoreElement.innerText)
     let toSubtract = parseInt(toSubtractText.value)
 
     remainingScoreNumber -= toSubtract
 
-    remainingScore.innerText = remainingScoreNumber
+    remainingScoreElement.innerText = remainingScoreNumber
     toSubtractText.value = ""
     
 }
