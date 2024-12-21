@@ -40,6 +40,10 @@ function createScoreContainer(remainingScoreReference){
 
 }
 
+function checkValidNumberInput(){
+    
+}
+
 function subtractRoundScore(remainingScoreElement, toSubtractText){
 
     let remainingScoreNumber = parseInt(remainingScoreElement.innerText)
@@ -67,3 +71,4 @@ function checkBlankName(name){
         return false
     }
 }
+
