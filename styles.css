@@ -55,7 +55,7 @@
     border-bottom: 1px solid black;
 }
 
-.nameTitle{
+.nameTitle, .title{
     align-self: stretch;
 }
 
@@ -65,7 +65,14 @@
     padding-right: 5px;
 }
 
+.subtract-container{
+    margin-left: 10px;
+    margin-right:10px ;
+}
+
 .subtract-textbox{
-    width: 50px;
+    width: 100px;
     margin-right: 10px;
+    margin-left: 10px;
+    
 }

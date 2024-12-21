@@ -29,8 +29,10 @@ function createNameDiv(){
 
 function createScoreContainer(remainingScoreReference){
 
-   let subtractContainer = createAnElement("",subtractRow, "div")
    
+
+   let subtractContainer = createAnElement("",subtractRow, "div")
+   subtractContainer.classList.add("subtract-container")
    let textbox = createAnElement("", subtractContainer, "input")
    textbox.classList.add("subtract-textbox")
 
@@ -40,19 +42,26 @@ function createScoreContainer(remainingScoreReference){
 
 }
 
-function checkValidNumberInput(){
+function checkValidNumberInput(value){
+    return !isNaN(value)
+        
     
 }
 
 function subtractRoundScore(remainingScoreElement, toSubtractText){
-
+ 
     let remainingScoreNumber = parseInt(remainingScoreElement.innerText)
     let toSubtract = parseInt(toSubtractText.value)
-
+    if( checkValidNumberInput(toSubtract)){
     remainingScoreNumber -= toSubtract
 
     remainingScoreElement.innerText = remainingScoreNumber
     toSubtractText.value = ""
+   } else {
+    toSubtractText.focus()
+    toSubtractText.value = "A Number!"
+   }
+    
     
 }
 
