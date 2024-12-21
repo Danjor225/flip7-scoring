@@ -9,8 +9,9 @@ const subtractRow = document.querySelector('#subtract-row-container')
 addNameButton.addEventListener('click', () => {
 
     createNameDiv()
-    let remaingScoreReference = createAnElement(startingScore, remainingScoreRow, "div")
-    createScoreContainer()
+    let remainingScoreReference = createAnElement(startingScore, remainingScoreRow, "div")
+    console.log(remainingScoreReference)
+    createScoreContainer(remainingScoreReference)
 })
 
 
@@ -26,16 +27,21 @@ function createNameDiv(){
 
 }
 
-function createScoreContainer(){
+function createScoreContainer(remainingScoreReference){
 
    let subtractContainer = createAnElement("",subtractRow, "div")
    let textbox = createAnElement("", subtractContainer, "input")
     let subtractButton = createAnElement("Subtract",subtractContainer, "button")
-  
+    subtractButton.addEventListener("click", subtractRoundScore(remainingScoreReference, textbox))
 
 }
 
+function subtractRoundScore(remainingScore, toSubtract){
 
+    let remainingScoreNumber = parseInt(remainingScore.innerText)
+    
+    
+}
 
 function createAnElement(text, parent, type){
     div = document.createElement(type)
