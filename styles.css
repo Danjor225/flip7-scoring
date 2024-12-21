@@ -10,3 +10,11 @@
     display: flex;
     gap: 50px;
 }
+
+#name-row-container,#remaning-score-row-container,#subtract-row-container{
+    display: flex;
+    flex-direction: column;
+    gap:20px
+}
+
+
