@@ -9,8 +9,16 @@ const subtractRow = document.querySelector('#subtract-row-container')
 addNameButton.addEventListener('click', () => {
 
     createNameDiv()
-
+    createRemainingScoreDiv()
 })
+
+function createRemainingScoreDiv(){
+    let newRemainingScoreDiv = document.createElement('div')
+    newRemainingScoreDiv.innerText = startingScore
+    remainingScoreRow.appendChild(newRemainingScoreDiv)
+
+}
+
 
 function createNameDiv(){
     let newName = nameTextbox.value
