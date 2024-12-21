@@ -9,10 +9,20 @@ const subtractRow = document.querySelector('#subtract-row-container')
 addNameButton.addEventListener('click', () => {
 
     let newName = nameTextbox.value
-
+    if(checkBlankName(newName)){
+        alert('Please enter a name')
+        return
+    }
     let newNameDiv = document.createElement('div')
     newNameDiv.innerText = newName
     nameRow.appendChild(newNameDiv)
 
 })
 
+function checkBlankName(name){
+    if(name === ""){
+        return true
+    } else {
+        return false
+    }
+}
