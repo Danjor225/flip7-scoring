@@ -31,6 +31,7 @@ function createScoreContainer(remainingScoreReference){
 
    let subtractContainer = createAnElement("",subtractRow, "div")
    let textbox = createAnElement("", subtractContainer, "input")
+   textbox.style.width = "70px"
     let subtractButton = createAnElement("Subtract",subtractContainer, "button")
     subtractButton.addEventListener("click", () => {
         subtractRoundScore(remainingScoreReference, textbox)})
