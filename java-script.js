@@ -30,9 +30,10 @@ function createNameDiv(){
 function createScoreContainer(remainingScoreReference){
 
    let subtractContainer = createAnElement("",subtractRow, "div")
-   subtractContainer.style.padding = "0 5px 0 5px"
+   
    let textbox = createAnElement("", subtractContainer, "input")
-   textbox.style.width = "70px"
+   textbox.style.width = "50px"
+   textbox.style.marginRight="10px"
     let subtractButton = createAnElement("Subtract",subtractContainer, "button")
     subtractButton.addEventListener("click", () => {
         subtractRoundScore(remainingScoreReference, textbox)})
