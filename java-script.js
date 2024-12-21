@@ -8,9 +8,11 @@ const subtractRow = document.querySelector('#subtract-row-container')
 
 addNameButton.addEventListener('click', () => {
 
-    // let newName = nameTextbox.value
+    let newName = nameTextbox.value
 
-    // let newNameDiv = document.createElement('div')
-
+    let newNameDiv = document.createElement('div')
+    newNameDiv.innerText = newName
+    nameRow.appendChild(newNameDiv)
 
 })
+
