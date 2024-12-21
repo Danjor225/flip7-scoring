@@ -22,7 +22,7 @@ function createNameDiv(){
         alert('Please enter a name')
         return
     }
-
+nameTextbox.value=""
     createAnElement(newName, nameRow, "div")
 
 }
@@ -32,14 +32,20 @@ function createScoreContainer(remainingScoreReference){
    let subtractContainer = createAnElement("",subtractRow, "div")
    let textbox = createAnElement("", subtractContainer, "input")
     let subtractButton = createAnElement("Subtract",subtractContainer, "button")
-    subtractButton.addEventListener("click", subtractRoundScore(remainingScoreReference, textbox))
+    subtractButton.addEventListener("click", () => {
+        subtractRoundScore(remainingScoreReference, textbox)})
 
 }
 
-function subtractRoundScore(remainingScore, toSubtract){
+function subtractRoundScore(remainingScore, toSubtractText){
 
     let remainingScoreNumber = parseInt(remainingScore.innerText)
-    
+    let toSubtract = parseInt(toSubtractText.value)
+
+    remainingScoreNumber -= toSubtract
+
+    remainingScore.innerText = remainingScoreNumber
+    toSubtractText.value = ""
     
 }
 
