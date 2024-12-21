@@ -9,15 +9,8 @@ const subtractRow = document.querySelector('#subtract-row-container')
 addNameButton.addEventListener('click', () => {
 
     createNameDiv()
-    createRemainingScoreDiv()
+    createDiv(startingScore, remainingScoreRow)
 })
-
-function createRemainingScoreDiv(){
-    let newRemainingScoreDiv = document.createElement('div')
-    newRemainingScoreDiv.innerText = startingScore
-    remainingScoreRow.appendChild(newRemainingScoreDiv)
-
-}
 
 
 function createNameDiv(){
@@ -26,14 +19,15 @@ function createNameDiv(){
         alert('Please enter a name')
         return
     }
-
-    let newNameDiv = document.createElement('div')
-    newNameDiv.innerText = newName
-    nameRow.appendChild(newNameDiv)
+    createDiv(newName, nameRow)
 
 }
 
-
+function createDiv(text, parent){
+    div = document.createElement('div')
+    div.innerText = text
+    parent.appendChild(div)
+}
 
 function checkBlankName(name){
     if(name === ""){
