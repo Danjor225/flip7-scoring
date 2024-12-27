@@ -34,6 +34,7 @@ function createScoreContainer(remainingScoreReference){
    let subtractContainer = createAnElement("",subtractRow, "div")
    subtractContainer.classList.add("subtract-container")
    let textbox = createAnElement("", subtractContainer, "input")
+   textbox.type='number'
    textbox.classList.add("subtract-textbox")
 
     let subtractButton = createAnElement("Subtract",subtractContainer, "button")
