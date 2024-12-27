@@ -68,11 +68,19 @@
 .subtract-container{
     margin-left: 10px;
     margin-right:10px ;
+    display: flex;
+    align-items: center;
+    padding-bottom: 1.5px;
 }
 
 .subtract-textbox{
     width: 100px;
     margin-right: 10px;
     margin-left: 10px;
+    height: 15px;
     
+}
+.subtract-button{
+    height: 20px;
+    font-size: small;
 }
