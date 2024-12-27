@@ -7,24 +7,24 @@ const remainingScoreRow = document.querySelector('#remaning-score-row-container'
 const subtractRow = document.querySelector('#subtract-row-container')
 
 addNameButton.addEventListener('click', () => {
-
-    createNameDiv()
-    let remainingScoreReference = createAnElement(startingScore, remainingScoreRow, "div")
-    createScoreContainer(remainingScoreReference)
-})
-
-
-function createNameDiv(){
-
     let newName = nameTextbox.value
     if(checkBlankName(newName)){
         alert('Please enter a name')
         return
+    } else {
+        createNameDiv(newName)
+        let remainingScoreReference = createAnElement(startingScore, remainingScoreRow, "div")
+        createScoreContainer(remainingScoreReference)
     }
+  
+})
+
+
+function createNameDiv(newName){
+    
     nameTextbox.value=""
    let newNameDiv = createAnElement(newName, nameRow, "div")
    newNameDiv.classList.add("name")
-
 }
 
 function createScoreContainer(remainingScoreReference){
